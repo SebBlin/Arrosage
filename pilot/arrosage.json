@@ -1,0 +1,6 @@
+{
+    "gpio": 17,
+    "pulselength": 400,
+    "len_seq_watering": 30,
+    "protocol": 1
+}

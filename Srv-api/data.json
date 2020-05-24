@@ -1,0 +1,53 @@
+[
+    {
+        "AppointmentId": 1,
+        "Text": "L 1",
+        "roomId": [
+            1
+        ],
+        "startDate": "2020-05-07T15:00:00.000Z",
+        "endDate": "2020-05-07T1:30:00.000Z"
+    },
+    {
+        "AppointmentId": 2,
+        "Text": "L 2",
+        "roomId": [
+            2
+        ],
+        "startDate": "2020-05-07T17:00:00.000Z",
+        "endDate": "2020-05-07T17:30:00.000Z",
+        "recurrenceRule": "FREQ=DAILY;COUNT=100"
+    },
+    {
+        "AppointmentId": 3,
+        "Text": "dd",
+        "startDate": "2020-05-07T16:00:00.000Z",
+        "endDate": "2020-05-07T16:30:00.000Z",
+        "allDay": false
+    },
+    {
+        "AppointmentId": 4,
+        "Text": "D2",
+        "startDate": "2020-05-08T16:00:00.000Z",
+        "endDate": "2020-05-08T16:30:00.000Z",
+        "allDay": false,
+        "roomId": 2
+    },
+    {
+        "AppointmentId": 5,
+        "description": ";,n",
+        "startDate": "2020-05-08T15:00:00.000Z",
+        "endDate": "2020-05-08T15:30:00.000Z",
+        "AllDay": false,
+        "Text": "kj",
+        "roomId": 1
+    },
+    {
+        "description": "xx",
+        "startDate": "2020-05-06T16:30:00.000Z",
+        "endDate": "2020-05-06T17:00:00.000Z",
+        "AllDay": false,
+        "Text": "xx",
+        "AppointmentId": 6
+    }
+]

@@ -7,6 +7,7 @@ This project is built from diffrent parts/components:
 - The Crontab from the Raspberry is scheduled to send watering starts to the arduino by using this RF433 protocol
 - The Raspberry also expose a Web GUI et API that make it easy to manage the crontab schedulings.
 
+```
                                                                                                                           +---------------+
                                                                                                                           |               |
                                                                                                                           |  +---------+  |       +---------+
@@ -38,6 +39,7 @@ This project is built from diffrent parts/components:
                                                                                                                                                         |
                                                                                                                                                         |
                                                                                                                                                         +
+```
 
 ## Details of components
 
@@ -46,7 +48,6 @@ The Web UI is build with 'react'. the source code is in the directory ./arrosage
 The main entry point is in `src/App.js`
 
 There is a configuration point to point to the right API server endpoint, 
-
 
 To start the Web GUI server, execute 
 ```

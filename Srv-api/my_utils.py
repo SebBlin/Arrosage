@@ -1,11 +1,15 @@
 import json
 import pandas
+from crontab import CronTab
+from datetime import datetime
+import time
+from dateutil import parser
 
 class Arr_Appointment:
     def __init__(self,filename='data.json'):
         self.filename = filename
         self.load_data()
-
+        self.crontab = CronTab(user='pi')
 
     def load_data(self):
         if self.filename:
@@ -35,6 +39,10 @@ class Arr_Appointment:
         if row.any(axis=None):
             print('add row')
             self.data = self.data.append(row)
+            print('end "', row['endDate'].iloc[0],'"')
+            duree = parser.isoparse(row['endDate'].iloc[0]) - parser.isoparse(row['startDate'].iloc[0])
+            job = self.crontab.new(command='python3 start_arrosage.py {} {}'.format(row["roomId"].iloc[0], duree.total_seconds() // 60) , comment='app{}'.format(row["AppointmentId"].iloc[0]))
+            print(job)
         print(self.data)
         
     def update_app(self, app):
@@ -44,8 +52,6 @@ class Arr_Appointment:
         print(self.data.index)
         self.data.update(row)
         # row = pandas.DataFrame.replace(value=app, index=[app['AppointmentId']])
-        print (self.data)
-
         print(self.data)
 
     def del_app(self, key):
@@ -53,7 +59,7 @@ class Arr_Appointment:
         self.data.drop(index=int(key), axis=0, inplace=True)
         print(self.data)
 
-        
+
 ########################
 # Other 
 

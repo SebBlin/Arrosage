@@ -21,8 +21,8 @@ class Arr_Appointment:
             self.data.to_csv(self.filename, index_label="idx")
     
     def get_max_id(self):
-        print(self.data)
         midx = self.data.index.max()
+        midx = 1 if pandas.isna(midx)
         return midx + 1
     
     def get_all_data(self): 

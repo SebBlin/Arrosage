@@ -1,6 +1,8 @@
 import React from 'react';
 
 import Scheduler, { Resource } from 'devextreme-react/scheduler';
+// import  {Scheduler} from '@devexpress/dx-react-scheduler-material-ui';
+// import { Resource } from 'devextreme-react/scheduler';
 
 import { data, resourcesData } from './data.js';
 import * as AspNetData from 'devextreme-aspnet-data-nojquery';
@@ -18,7 +20,7 @@ const dataSource = AspNetData.createStore({
   }
 });
 
-const currentDate = new Date(2020, 4, 9);
+const currentDate = new Date();
 // const currentDate = new Date(2017, 4, 23);
 const views = ['agenda','day', 'week', 'month'];
 
@@ -33,11 +35,12 @@ class App extends React.Component {
         defaultCurrentDate={currentDate}
         firstDayOfWeek={1}
         startDayHour={9}
-        height={800}
+        height="auto"
         textExpr= "Text"
         // startDateExpr="StartDate"
         // endDateExpr="EndDate"
         allDayExpr="AllDay"
+        timeZone={'Europe/Paris'}
       >
         <Resource
           dataSource={resourcesData}

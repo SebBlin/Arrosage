@@ -45,6 +45,12 @@ This project is built from diffrent parts/components:
 
 ### Web GUI
 The Web UI is build with 'react'. the source code is in the directory ./arrosage/. 
+
+#### Installation 
+Das le répertoire src : 
+npm install devextreme@20.1 devextreme-react@20.1 --save --save-exact
+
+
 The main entry point is in `src/App.js`
 
 There is a configuration point to point to the right API server endpoint, 
@@ -58,6 +64,15 @@ npm start
 
 
 ### API SRV
+
+
+To start the server, 
+```
+cd Srv-api
+python3 srv.py
+```
+TODO :
+   This should be started automaticallay with a 'real' HTTP server
 
 
 ### Arduino Manager

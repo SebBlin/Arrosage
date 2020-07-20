@@ -48,7 +48,7 @@ parser.add_argument('-p', dest='pulselength', type=int, default=None, help="Puls
 args = parser.parse_args()
 
 
-config_file = 'arrosage.json'
+config_file = '/home/pi/Arrosage/pilot/arrosage.json'
 with open(config_file, "r") as read_file:
     config = json.load(read_file)
 
